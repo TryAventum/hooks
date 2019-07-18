@@ -198,7 +198,7 @@ hooks.addAction(
   10
 )
 
-hooks.doAction('awesome_action_sync', 10, 20)
+hooks.doActionSync('awesome_action_sync', 10, 20)
 ```
 
 The result will be:
