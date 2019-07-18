@@ -17,7 +17,7 @@ npm install @aventum/hooks --save
 <script src="https://unpkg.com/@aventum/hooks@latest"></script>
 ```
 
-### Usage
+## Usage
 
 #### ES2015:
 
@@ -42,8 +42,8 @@ var AventumHooks = require('@aventum/hooks')
 var hooks = AventumHooks.createHooks()
 ```
 
-### Examples
-> These example token from src/test/index.manual.test.js file, you can run this file using `node ./src/examples/misc.js` if you have Node.js installed.
+## Examples
+> These examples are taken from src/test/index.manual.test.js file, you can run this file using `node ./src/examples/misc.js` if you have Node.js installed.
 
 
 #### Example 1
@@ -255,7 +255,7 @@ The result will be:
 
 ---
 
-### API Usage
+## API Usage
 
 * `createHooks()`
 * `addAction( 'hookName', 'namespace', callback, priority )`
