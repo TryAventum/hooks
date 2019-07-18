@@ -1,0 +1,34 @@
+{
+  "name": "@aventum/hooks",
+  "version": "1.0.0",
+  "description": "A universal, lightweight & efficient EventManager/PluginsSystem/MiddlewareManager/ExtendabilitySystem for JavaScript",
+  "main": "dist/aventum-hooks.js",
+  "scripts": {
+    "build": "webpack",
+    "build:browser": "webpack  --env.build=var",
+    "build:node": "webpack  --env.build=umd",
+    "test": "jest"
+  },
+  "author": {
+    "name": "Mohammed Al-Mahdawi",
+    "email": "mohammed@al-mahdawi.com",
+    "url": "https://al-mahdawi.com"
+  },
+  "keywords": [
+    "hooks",
+    "plugins-system",
+    "event-system",
+    "event-manager",
+    "middleware-manager"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^24.8.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
