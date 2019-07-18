@@ -1,6 +1,6 @@
 {
   "name": "@aventum/hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A universal, lightweight & efficient EventManager/PluginsSystem/MiddlewareManager/ExtendabilitySystem for JavaScript",
   "main": "dist/aventum-hooks.js",
   "scripts": {
