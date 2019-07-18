@@ -92,9 +92,6 @@ hooks.addFilter(
   10
 )
 
-/**
- * This function will run the async filters and actions
- */
 const AsyncFunction = async () => {
   var result = await hooks.applyFilters('awesome_filter', 25, 1, 2)
   console.log(result)
@@ -146,9 +143,6 @@ hooks.addAction(
   10
 )
 
-/**
- * This function will run the async filters and actions
- */
 const AsyncFunction = async () => {
   await hooks.doAction('awesome_action', 25, 6, 30)
 }
