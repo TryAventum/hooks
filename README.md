@@ -43,7 +43,7 @@ var hooks = AventumHooks.createHooks()
 ```
 
 ## Examples
-> These examples are taken from src/test/index.manual.test.js file, you can run this file using `node ./src/examples/misc.js` if you have Node.js installed.
+> These examples are taken from src/test/index.manual.test.js file, you can run this file using `node ./src/examples/misc.js` if you have Node.js installed, there will be other example files worth to check all of them will be able to run using `node ./src/examples/[fileName].js`.
 
 
 #### Example 1
