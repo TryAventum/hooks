@@ -1,5 +1,5 @@
 /*!
- * Aventum Hooks v1.0.4
+ * Aventum Hooks v1.0.5
  * (c) 2019 Mohammed Al-Mahdawi
  * Released under the MIT License.
  */
