@@ -55,7 +55,7 @@ var hooks = AventumHooks.createHooks()
  */
 hooks.addFilter(
   'awesome_filter',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -68,7 +68,7 @@ hooks.addFilter(
 
 hooks.addFilter(
   'awesome_filter',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -81,7 +81,7 @@ hooks.addFilter(
 
 hooks.addFilter(
   'awesome_filter',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -118,7 +118,7 @@ var hooks = AventumHooks.createHooks()
 
 hooks.addAction(
   'awesome_action',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -131,7 +131,7 @@ hooks.addAction(
 )
 hooks.addAction(
   'awesome_action',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -169,7 +169,7 @@ var hooks = AventumHooks.createHooks()
  */
 hooks.addAction(
   'awesome_action_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (arg1, arg2) => {
     console.log('awesome_action_sync1', arg1, arg2)
   },
@@ -177,7 +177,7 @@ hooks.addAction(
 )
 hooks.addAction(
   'awesome_action_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (arg1, arg2) => {
     console.log('awesome_action_sync2', arg1, arg2)
   },
@@ -185,7 +185,7 @@ hooks.addAction(
 )
 hooks.addAction(
   'awesome_action_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (arg1, arg2) => {
     console.log('awesome_action_sync3', arg1, arg2)
   },
@@ -215,7 +215,7 @@ var hooks = AventumHooks.createHooks()
  */
 hooks.addFilter(
   'awesome_filter_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
   },
@@ -223,7 +223,7 @@ hooks.addFilter(
 )
 hooks.addFilter(
   'awesome_filter_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
   },
@@ -231,7 +231,7 @@ hooks.addFilter(
 )
 hooks.addFilter(
   'awesome_filter_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
   },
@@ -270,6 +270,8 @@ The result will be:
 * `hasFilter( 'hookName' )`
 * `actions`
 * `filters`
+
+> The namespace is a unique string that can only contain numbers, letters, dashes, periods, underscores and slashes, it used to identify the callback, the best practice to make it in the form `vendor/plugin/function`
 
 ### Events on action/filter add or remove
 
