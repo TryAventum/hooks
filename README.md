@@ -22,7 +22,7 @@ npm install @aventum/hooks --save
 #### ES2015:
 
 ```javascript
-import AventumHooks from '@aventum/hooks'
+import * as AventumHooks from '@aventum/hooks'
 var hooks = AventumHooks.createHooks()
 ```
 
