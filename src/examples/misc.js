@@ -7,7 +7,7 @@ var hooks = AventumHooks.createHooks()
  */
 hooks.addFilter(
   'awesome_filter',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -20,7 +20,7 @@ hooks.addFilter(
 
 hooks.addFilter(
   'awesome_filter',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -33,7 +33,7 @@ hooks.addFilter(
 
 hooks.addFilter(
   'awesome_filter',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -50,7 +50,7 @@ hooks.addFilter(
 
 hooks.addAction(
   'awesome_action',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -63,7 +63,7 @@ hooks.addAction(
 )
 hooks.addAction(
   'awesome_action',
-  'namespace',
+  'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
@@ -91,7 +91,7 @@ AsyncFunction()
  */
 hooks.addAction(
   'awesome_action_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (arg1, arg2) => {
     console.log('awesome_action_sync1', arg1, arg2)
   },
@@ -99,7 +99,7 @@ hooks.addAction(
 )
 hooks.addAction(
   'awesome_action_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (arg1, arg2) => {
     console.log('awesome_action_sync2', arg1, arg2)
   },
@@ -107,7 +107,7 @@ hooks.addAction(
 )
 hooks.addAction(
   'awesome_action_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (arg1, arg2) => {
     console.log('awesome_action_sync3', arg1, arg2)
   },
@@ -121,7 +121,7 @@ hooks.doActionSync('awesome_action_sync', 10, 20)
  */
 hooks.addFilter(
   'awesome_filter_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
   },
@@ -129,7 +129,7 @@ hooks.addFilter(
 )
 hooks.addFilter(
   'awesome_filter_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
   },
@@ -137,7 +137,7 @@ hooks.addFilter(
 )
 hooks.addFilter(
   'awesome_filter_sync',
-  'namespace2',
+  'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
   },
