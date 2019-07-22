@@ -54,7 +54,7 @@ hooks.addAction(
   (arg1, arg2, arg3) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        console.log('action1', arg1, arg2, arg3)
+        console.log('Action1', arg1, arg2, arg3)
         resolve(arg1)
       }, 300)
     })
@@ -67,7 +67,7 @@ hooks.addAction(
   (arg1, arg2, arg3) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        console.log('action2', arg1, arg2, arg3)
+        console.log('Action2', arg1, arg2, arg3)
         resolve(arg1)
       }, 300)
     })
@@ -93,7 +93,7 @@ hooks.addAction(
   'AwesomeActionSync',
   'vendor2/plugin/function',
   (arg1, arg2) => {
-    console.log('awesome_action_sync1', arg1, arg2)
+    console.log('AwesomeActionSync1', arg1, arg2)
   },
   10
 )
@@ -101,7 +101,7 @@ hooks.addAction(
   'AwesomeActionSync',
   'vendor2/plugin/function',
   (arg1, arg2) => {
-    console.log('awesome_action_sync2', arg1, arg2)
+    console.log('AwesomeActionSync2', arg1, arg2)
   },
   10
 )
@@ -109,7 +109,7 @@ hooks.addAction(
   'AwesomeActionSync',
   'vendor2/plugin/function',
   (arg1, arg2) => {
-    console.log('awesome_action_sync3', arg1, arg2)
+    console.log('AwesomeActionSync3', arg1, arg2)
   },
   10
 )
