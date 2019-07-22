@@ -51,11 +51,11 @@ hooks.addFilter(
 hooks.addAction(
   'awesome_action',
   'vendor/plugin/function',
-  (content, arg1, arg2) => {
+  (arg1, arg2, arg3) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        console.log('action1', content, arg1, arg2)
-        resolve(content)
+        console.log('action1', arg1, arg2, arg3)
+        resolve(arg1)
       }, 300)
     })
   },
@@ -64,11 +64,11 @@ hooks.addAction(
 hooks.addAction(
   'awesome_action',
   'vendor/plugin/function',
-  (content, arg1, arg2) => {
+  (arg1, arg2, arg3) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        console.log('action2', content, arg1, arg2)
-        resolve(content)
+        console.log('action2', arg1, arg2, arg3)
+        resolve(arg1)
       }, 300)
     })
   },
