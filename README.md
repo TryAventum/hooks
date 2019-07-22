@@ -54,7 +54,7 @@ var hooks = AventumHooks.createHooks()
  * Asynchronous Filters
  */
 hooks.addFilter(
-  'awesome_filter',
+  'AwesomeFilter',
   'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
@@ -67,7 +67,7 @@ hooks.addFilter(
 )
 
 hooks.addFilter(
-  'awesome_filter',
+  'AwesomeFilter',
   'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
@@ -80,7 +80,7 @@ hooks.addFilter(
 )
 
 hooks.addFilter(
-  'awesome_filter',
+  'AwesomeFilter',
   'vendor/plugin/function',
   (content, arg1, arg2) => {
     return new Promise(function(resolve, reject) {
@@ -93,7 +93,7 @@ hooks.addFilter(
 )
 
 const AsyncFunction = async () => {
-  var result = await hooks.applyFilters('awesome_filter', 25, 1, 2)
+  var result = await hooks.applyFilters('AwesomeFilter', 25, 1, 2)
   console.log(result)
 }
 
@@ -117,26 +117,26 @@ var hooks = AventumHooks.createHooks()
  */
 
 hooks.addAction(
-  'awesome_action',
+  'AwesomeAction',
   'vendor/plugin/function',
-  (content, arg1, arg2) => {
+  (arg1, arg2, arg3) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        console.log('action1', content, arg1, arg2)
-        resolve(content)
+        console.log('Action1', arg1, arg2, arg3)
+        resolve(arg1)
       }, 300)
     })
   },
   10
 )
 hooks.addAction(
-  'awesome_action',
+  'AwesomeAction',
   'vendor/plugin/function',
-  (content, arg1, arg2) => {
+  (arg1, arg2, arg3) => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        console.log('action2', content, arg1, arg2)
-        resolve(content)
+        console.log('Action2', arg1, arg2, arg3)
+        resolve(arg1)
       }, 300)
     })
   },
@@ -144,7 +144,7 @@ hooks.addAction(
 )
 
 const AsyncFunction = async () => {
-  await hooks.doAction('awesome_action', 25, 6, 30)
+  await hooks.doAction('AwesomeAction', 25, 6, 30)
 }
 
 AsyncFunction()
@@ -153,8 +153,8 @@ AsyncFunction()
 The result will be:
 
 ```shell
-action1 25 6 30
-action2 25 6 30
+Action1 25 6 30
+Action2 25 6 30
 ```
 
 ---
@@ -168,39 +168,39 @@ var hooks = AventumHooks.createHooks()
  * Synchronous Actions
  */
 hooks.addAction(
-  'awesome_action_sync',
+  'AwesomeActionSync',
   'vendor2/plugin/function',
   (arg1, arg2) => {
-    console.log('awesome_action_sync1', arg1, arg2)
+    console.log('AwesomeActionSync1', arg1, arg2)
   },
   10
 )
 hooks.addAction(
-  'awesome_action_sync',
+  'AwesomeActionSync',
   'vendor2/plugin/function',
   (arg1, arg2) => {
-    console.log('awesome_action_sync2', arg1, arg2)
+    console.log('AwesomeActionSync2', arg1, arg2)
   },
   10
 )
 hooks.addAction(
-  'awesome_action_sync',
+  'AwesomeActionSync',
   'vendor2/plugin/function',
   (arg1, arg2) => {
-    console.log('awesome_action_sync3', arg1, arg2)
+    console.log('AwesomeActionSync3', arg1, arg2)
   },
   10
 )
 
-hooks.doActionSync('awesome_action_sync', 10, 20)
+hooks.doActionSync('AwesomeActionSync', 10, 20)
 ```
 
 The result will be:
 
 ```shell
-awesome_action_sync1 10 20
-awesome_action_sync2 10 20
-awesome_action_sync3 10 20
+AwesomeActionSync1 10 20
+AwesomeActionSync2 10 20
+AwesomeActionSync3 10 20
 ```
 
 ---
@@ -214,7 +214,7 @@ var hooks = AventumHooks.createHooks()
  * Synchronous Filters
  */
 hooks.addFilter(
-  'awesome_filter_sync',
+  'AwesomeFilterSync',
   'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
@@ -222,7 +222,7 @@ hooks.addFilter(
   10
 )
 hooks.addFilter(
-  'awesome_filter_sync',
+  'AwesomeFilterSync',
   'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
@@ -230,7 +230,7 @@ hooks.addFilter(
   10
 )
 hooks.addFilter(
-  'awesome_filter_sync',
+  'AwesomeFilterSync',
   'vendor2/plugin/function',
   (content, arg1, arg2) => {
     return content + arg1 + arg2
@@ -238,7 +238,7 @@ hooks.addFilter(
   10
 )
 
-console.log(hooks.applyFiltersSync('awesome_filter_sync', 5, 1, 2))
+console.log(hooks.applyFiltersSync('AwesomeFilterSync', 5, 1, 2))
 ```
 
 The result will be:
