@@ -36,7 +36,7 @@ hooks.addAction(
 hooks.removeAction( 'AwesomeAction', 'vendor1/plugin/function' )
 
 /**
- * This function will run the async filters and actions
+ * This function will run the async actions
  */
 const AsyncFunction = async () => {
   await hooks.doAction('AwesomeAction', 25, 6, 30)
