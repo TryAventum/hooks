@@ -3,9 +3,13 @@ const webpack = require('webpack')
 const version = process.env.VERSION || require('./package.json').version
 
 const banner =
-  'Aventum Hooks v' + version + '\n' +
-  '(c) ' + new Date().getFullYear() + ' Mohammed Al-Mahdawi\n' +
-  'Released under the MIT License.'
+  'Aventum Hooks v' +
+  version +
+  '\n' +
+  '(c) ' +
+  new Date().getFullYear() +
+  ' Mohammed Al-Mahdawi\n' +
+  'Released under the GPL-2.0-or-later License.'
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -15,7 +19,7 @@ module.exports = {
     filename: 'aventum-hooks.js',
     library: 'AventumHooks',
     globalObject: 'this',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
@@ -26,15 +30,15 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-proposal-object-rest-spread']
-          }
-        }
-      }
-    ]
+            plugins: ['@babel/plugin-proposal-object-rest-spread'],
+          },
+        },
+      },
+    ],
   },
   plugins: [
-      new webpack.BannerPlugin({
-          banner
-      })
-  ]
-};
+    new webpack.BannerPlugin({
+      banner,
+    }),
+  ],
+}
